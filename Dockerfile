@@ -3,6 +3,8 @@ FROM node:20-alpine AS builder
 RUN apk update && \
     apk add git ffmpeg wget curl bash openssl
 
+ARG CHROME_VERSION=125.0.6422.112
+
 LABEL version="2.2.3" description="Api to control whatsapp features through http requests." 
 LABEL maintainer="Davidson Gomes" git="https://github.com/DavidsonGomes"
 LABEL contact="contato@atendai.com"
